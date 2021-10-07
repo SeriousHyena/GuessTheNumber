@@ -3,8 +3,8 @@
 */
 
 #include <iostream>
-#include <ctime>
-#include <cstdlib>
+#include <ctime>		//the library for time which we use as the random number seed
+#include <cstdlib>		//the random, number function library
 
 using namespace std;
 
