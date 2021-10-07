@@ -31,7 +31,7 @@ int main()
 
 	//interact with the user
 	guessCount++;
-	cout << randomNumber;
+	//cout << randomNumber; //used for debugging
 	
 	while (guess != randomNumber)
 	{
