@@ -1,5 +1,14 @@
 /*
-
+*C++
+*GuessTheNumber
+*Ernest Mack
+*10/7/21
+* 
+Create a random number using system time to seed it.
+Have the user guess the random number
+If the user guesses too low prompt for another number
+If the user guesses too lhigh prompt for another number
+When the user gets it right let them and tell them how many tries it took
 */
 
 #include <iostream>
