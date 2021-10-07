@@ -27,7 +27,7 @@ int main()
 	int guessCount = 0;	//keep track of number of guesses
 
 	srand(time(nullptr));
-	randomNumber = rand() % 100;
+	randomNumber = rand() % 100 + 1;
 
 	//interact with the user
 	guessCount++;
@@ -35,6 +35,12 @@ int main()
 	
 	while (guess != randomNumber)
 	{
+		if (guess > 100 || guess < 1)
+		{
+			cout << "Please enter a number between 1 and 100 inclusive: ";
+			cin >> guess;
+		}
+
 		cout << "Please enter a number between 1 and 100 inclusive: ";
 		cin >> guess;
 	if (guess > randomNumber)	//if the guess is too high get another input
