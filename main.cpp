@@ -26,17 +26,19 @@ int main()
 	{
 		cout << "Please enter a number between 1 and 100 inclusive: ";
 		cin >> guess;
-	if (guess > randomNumber)
+	if (guess > randomNumber)	//if the guess is too high get another input
 	{
 		cout << "You guessed too high, try again: ";
 		cin >> guess;
+		guessCount++;
 	}
-	if (guess < randomNumber)
+	if (guess < randomNumber)	//if the guess is too low get another input
 	{
 		cout << "You guessed too low, try again: ";
 		cin >> guess;
+		guessCount++;
 	}
-	else
+	if (guess == randomNumber)
 	{
 		cout << "You guessed " << guess << " That is correct! Congratulations!" << " It took you only " << guessCount << " trie(s)!";
 	}
