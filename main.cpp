@@ -10,18 +10,41 @@ using namespace std;
 
 int main()
 {
-	int counter = 0;
+	//create a random number between 1 and 100 inclusive
 	int randomNumber = 0;
-	srand(time(nullptr));
+	int guess = 0;			//store the user's guess
+	int guessCount = 0;	//keep track of number of guesses
 
-	for (int i = 0; i < 100; i++)
+	srand(time(nullptr));
+	randomNumber = rand() % 100;
+
+	//interact with the user
+	guessCount++;
+	cout << randomNumber;
+	
+	while (guess != randomNumber)
 	{
-		randomNumber = rand() % 100;
-		cout << randomNumber << endl;
-		counter++;
-		
+		cout << "Please enter a number between 1 and 100 inclusive: ";
+		cin >> guess;
+	if (guess > randomNumber)
+	{
+		cout << "You guessed too high, try again: ";
+		cin >> guess;
 	}
-	cout << "We processed " << counter << " numbers." << endl;
+	if (guess < randomNumber)
+	{
+		cout << "You guessed too low, try again: ";
+		cin >> guess;
+	}
+	else
+	{
+		cout << "You guessed " << guess << " That is correct! Congratulations!" << " It took you only " << guessCount << " trie(s)!";
+	}
+	}
+
+	
+
+
 
 	return 0;
 }
